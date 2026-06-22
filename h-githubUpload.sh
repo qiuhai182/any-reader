@@ -1,8 +1,8 @@
 #!/bin/bash
 
-git pull
-
 echo "=== 推送到 GitHub ==="
+
+git pull github master
 
 git add --all -- ':!nul'
 git commit -m "更新"
