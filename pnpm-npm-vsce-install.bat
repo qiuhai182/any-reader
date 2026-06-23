@@ -1,5 +1,5 @@
 
-@REM ========== °²×°ÒÀÀµ ==========
+@REM ========== å®‰è£…ä¾èµ– ==========
 
 pnpm install
 pnpm.cmd install
