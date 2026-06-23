@@ -2,7 +2,7 @@
 chcp 65001 >nul 2>&1
 
 echo ========== 步骤1：安装依赖 ==========
-call pnpm-npm-vsce-install.bat
+@REM call pnpm-npm-vsce-install.bat
 
 echo.
 echo ========== 步骤2：构建核心模块 ==========
@@ -21,11 +21,8 @@ cd ..\..
 echo.
 echo ========== 步骤5：生成 VSIX 包 ==========
 cd packages\vscode
-copy package.json package.json.build-bak >nul
 call pnpm.cmd run vscode:prepublish
 call pnpm.cmd exec vsce package --no-dependencies
-copy /y package.json.build-bak package.json >nul
-del package.json.build-bak
 cd ..\..
 
 echo.
