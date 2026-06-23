@@ -56,7 +56,7 @@
     "server": "pnpm --filter=@any-reader/server dev",
     "server:build": "pnpm --filter=@any-reader/server build",
     "cli:build-tpl": "pnpm --filter=@any-reader/web cli:build",
-    "cli:build-js": "pnpm --filter=@any-reader/cli build",
+    "cli:build-js": "pnpm --filter=./packages/cli build",
     "cli:build": "npm-run-all cli:build-tpl cli:build-js",
     "utools:build": "pnpm --filter=@any-reader/web utools:build && pnpm --filter=@any-reader/utools build",
     "rubick:build": "pnpm --filter=@any-reader/rubick build",
