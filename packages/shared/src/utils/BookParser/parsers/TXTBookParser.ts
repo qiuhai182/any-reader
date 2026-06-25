@@ -7,7 +7,7 @@ import { BaseBookParser } from './BaseBookParser';
 export default class TXTBookParser extends BaseBookParser implements IBookParser {
   /** 章节正则 */
   private chapterPattern =
-    /^第\s{0,4}[\d〇零一二两三四五六七八九十百千万壹贰叁肆伍陆柒捌玖拾佰仟]+?\s{0,4}(?:章|节(?!课)|卷|页|集|部|篇(?!张)).{0,40}$/;
+    /^(?:TODO\s*)?第\s{0,4}[\d〇零一二两三四五六七八九十百千万壹贰叁肆伍陆柒捌玖拾佰仟]+?\s{0,4}(?:章|节(?!课)|卷|页|集|部|篇(?!张)).{0,40}$/;
 
   private async _getText(filePath: string): Promise<string> {
     const sourceFile = await fs.readFile(filePath);
@@ -36,7 +36,7 @@ export default class TXTBookParser extends BaseBookParser implements IBookParser
         }
 
         result.push({
-          name: line,
+          name: line.replace(/^TODO\s*/, ''),
           chapterPath: i.toString(),
           filePath: this.filePath
         });
