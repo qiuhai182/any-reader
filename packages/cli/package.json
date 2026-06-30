@@ -1,8 +1,8 @@
 {
-  "name": "@any-reader/cli",
+  "name": "any-reader",
   "type": "commonjs",
-  "version": "1.11.9",
-  "description": "",
+  "version": "1.11.12",
+  "description": "any-reader 命令行工具",
   "author": "aooiuu <aooiu@qq.com>",
   "license": "GPL3",
   "repository": {
